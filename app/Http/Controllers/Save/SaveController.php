@@ -54,6 +54,12 @@ class SaveController extends Controller {
 
     }
 
+
+    public function Closed(Request $req){
+        return redirect('/')->with(Auth::logout());    
+    } 
+
+
 /*     public function Changed() { 
 
         $Change = User::where('Grado', '11')->get();

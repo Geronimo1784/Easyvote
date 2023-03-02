@@ -85,7 +85,7 @@
         <div style="text-align: center; font-size: 40px; font-weight: 600; color: rgb(39, 39, 39)">Gracias por tu voto</div>
         <div style="text-align: center; font-size: 20px; ; color: rgb(136, 136, 136)">Tu votación ha sido registrada correctamente.</div>
         <div class="container-x" style="padding: 20px;">
-            <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+            <a href="{{route('Closesion')}}">
                 <div class="Btn-Pry">Aceptar</div>
             </a>    
         </div>

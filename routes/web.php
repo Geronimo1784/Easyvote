@@ -29,3 +29,6 @@ Route::get('/SavePerson', [SaveController::class, 'SavePerson']);
 Route::post('/SavePerson', [SaveController::class, 'SavePerson']);
 
 Route::get('/Changed', [SaveController::class, 'Changed']);
+
+#Cerrar Session
+Route::get('Closesion', [SaveController::class, 'Closed'])->name("Closesion");
