@@ -8,6 +8,7 @@ use App\Models\Resultados;
 use App\Models\User;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 class SaveController extends Controller {
@@ -60,6 +61,26 @@ class SaveController extends Controller {
         return redirect('/')->with(Auth::logout());    
     } 
 
+    public function Response(Request $req){    
+
+        $Clouds =  DB::table('result')->select('candidatos.cargo', 'candidatos.nombres', 'candidatos.apellidos', 'candidatos.grado', 'candidatos.grupo', 'result.idr_cadidato', DB::raw('COUNT(result.idr_cadidato) AS VOTOS') )
+        ->join('candidatos', 'candidatos.id', '=', 'result.idr_cadidato')  
+        ->groupBy('result.idr_cadidato')
+        ->groupBy('candidatos.nombres')
+        ->groupBy('candidatos.apellidos')   
+        ->groupBy('candidatos.grado')   
+        ->groupBy('candidatos.grupo')   
+        ->groupBy('candidatos.cargo')  
+        ->orderBy('candidatos.grado', 'DESC')
+        ->orderBy('candidatos.grupo', 'DESC')
+        ->get();
+
+        return view('Response',[
+            'Dats' => $Clouds
+        ]);
+
+    }
+
 
 /*     public function Changed() { 
 
@@ -75,7 +96,7 @@ class SaveController extends Controller {
 
         }
 
-        return $Change;
+        
         
     } */
 

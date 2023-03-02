@@ -22,10 +22,10 @@
                         @csrf
 
                         <div class="row mb-3 container-x">
-                            <div style="text-align: center; font-size: 35px; font-weight: bolder; color: rgb(13, 61, 167);">Institución Educativa Aguas Negras</div>
-                            <div style="text-align: center; font-size: 22px; font-weight: bolder; padding: 2px;">GOES 2023</div>
+                            <div style="text-align: center; font-size: 30px; font-weight: bolder; color: rgb(13, 61, 167);">Institución Educativa Aguas Negras</div>
+                            <div style="text-align: center; font-size: 20px; font-weight: bolder; padding: 2px;">GOES 2023</div>
 
-                            <div style="text-align: center;"> <img src="{{ asset('Candi_700/Escudo.png')}}" alt="" width="220" height="220">  </div>
+                            <div style="text-align: center;"> <img src="{{ asset('Candi_700/Escudo.png')}}" alt="" width="180" height="180">  </div>
 
                             <div style="text-align: center; font-size: 14px; font-weight: 600; padding: 10px; color: darkgreen;">POR FAVOR INGRESE SU CONTRASEÑA</div>
 
@@ -70,15 +70,15 @@
                             </div>
                         </div> --}}
 
-                        <div class="row mb-3 container-x">
-                        <button type="submit" class="btn btn-primary" style="width: 150px;"> Ingresar </button>
+                        <div class="container-x">
+                            <button type="submit" class="btn btn-primary" style="width: 150px;"> Ingresar </button>
 {{-- 
                                 @if (Route::has('password.request'))
                                     <a class="btn btn-link" href="{{ route('password.request') }}">
                                         {{ __('Forgot Your Password?') }}
                                     </a>
                                 @endif --}}
-                            </div>
+                        </div>
                     </form>
                 </div>
             </div>

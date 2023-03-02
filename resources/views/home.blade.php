@@ -38,8 +38,8 @@
 
     }
     .Box{
-        width: 300px;
-        height: 400px;
+        width: 250px;
+        height: 350px;
         border: 1px solid #d3d3d3;
         border-radius: 7px;
         padding: 20px 10px;
@@ -104,7 +104,7 @@
                 <div class="container-x">
                     @foreach ($Concejo as $Csj)
                         <div class="Box CONSEJO" data-reg="{{ $Csj->id }}">
-                            <div> <img src="{{ asset('Candi_700/'.$Csj->photo)}}" alt="" width="280" height="280">  </div>
+                            <div> <img src="{{ asset('Candi_700/'.$Csj->photo)}}" alt="" width="230" height="230">  </div>
                             <div class="tac" style="font-size: 20px; font-weight: bolder;">{{ $Csj->nombres }} {{ $Csj->apellidos }}</div>
 {{--                             <div class="tac">GRADO: {{ $Csj->grado }} </div>                
                             <div class="tac">GRUPO: {{ $Csj->grupo }} </div>    
@@ -126,7 +126,7 @@
                 <div class="container-x">
                     @foreach ($Personero as $Psn)
                         <div class="Box PERSONERO" data-reg="{{ $Psn->id }}" >
-                            <div> <img src="{{ asset('Candi_700/'.$Psn->photo)}}" alt="" width="280" height="280">  </div>
+                            <div> <img src="{{ asset('Candi_700/'.$Psn->photo)}}" alt="" width="230" height="230">  </div>
                             <div class="tac" style="font-size: 20px; font-weight: bolder;">{{ $Psn->nombres }} {{ $Psn->apellidos }}</div>
 {{--                             <div class="tac">GRADO: {{ $Psn->grado }} </div>                
                             <div class="tac">GRUPO: {{ $Psn->grupo }} </div>    
