@@ -97,7 +97,7 @@
 
             <div style="padding: 10px;"></div>
             <div style="text-align: center; font-size: 35px; font-weight: 600; color: rgb(39, 39, 39)">GOBIERNO ESCOLAR 2023 - INEAN</div>
-            <div style="text-align: center; font-size: 25px; font-weight: 600; color: #3199ee">CONSEJO - GRADO {{ auth()->user()->Grado }}</div>
+            <div style="text-align: center; font-size: 25px; font-weight: 600; color: #3199ee">CONSEJO - GRADO {{ $Grade }}</div>
             <div style="padding: 15px;"></div>
 
 

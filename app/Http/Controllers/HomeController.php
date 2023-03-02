@@ -25,12 +25,25 @@ class HomeController extends Controller
      */
     public function index() {
 
-        $Concejo = Candidatos::where('cargo', 'CONCEJO')->where('Grado', auth()->user()->Grado)->get();
+        if(auth()->user()->Grado == '0' || auth()->user()->Grado == '1' || auth()->user()->Grado == '2'){
+
+            $Concejo = Candidatos::where('cargo', 'CONCEJO')->where('Grado', '3')->get();  
+            $Grade = "3";          
+
+        }else{
+            
+            $Concejo = Candidatos::where('cargo', 'CONCEJO')->where('Grado', auth()->user()->Grado)->get();   
+            $Grade = auth()->user()->Grado;           
+        
+        }
+
+        //$Concejo = Candidatos::where('cargo', 'CONCEJO')->where('Grado', auth()->user()->Grado)->get();
         $Personero = Candidatos::where('cargo', 'PERSONERO')->get();
         
         return view('home',[
             'Concejo' => $Concejo,
-            'Personero' => $Personero           
+            'Personero' => $Personero,
+            'Grade' => $Grade    
         ]);
 
     }
